@@ -151,3 +151,7 @@ if __name__ == "__main__":
     with open(out, "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"Yazıldı: {out} ({len(svg) // 1024} KB)")
+    os.makedirs(os.path.dirname(out) or ".", exist_ok=True)
+    with open(out, "w", encoding="utf-8") as f:
+        f.write(svg)
+    print(f"Yazıldı: {out} ({len(svg) // 1024} KB)")
